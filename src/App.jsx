@@ -1,8 +1,22 @@
-import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, Layout } from "./components";
+
+import { Book, Home, Layout, MyShelf } from "./components";
+import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
+   const [books, setBooks] = useState([]);
+   const [loading, setLoading] = useState(false);
+
+   useEffect(() => {
+      fetch("https://fakerapi.it/api/v1/books?_quantity=100")
+         .then((res) => res.json())
+         .then(({ data }) => {
+            setBooks(data);
+            setLoading(true);
+         });
+   }, []);
+
    const router = createBrowserRouter([
       {
          path: "/",
@@ -10,7 +24,15 @@ function App() {
          children: [
             {
                path: "/",
-               element: <Home />,
+               element: <Home books={books} loading={loading} />,
+            },
+            {
+               path: "/my-shelf",
+               element: <MyShelf />,
+            },
+            {
+               path: "/books/:id",
+               element: <Book />,
             },
          ],
       },

@@ -1,3 +1,135 @@
-#root {
+body {
+   max-width: 1280px;
+   margin: 0 auto;
+}
+
+.App {
+   background: #f0e9e9;
    text-align: center;
+   position: relative;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.navbar-wrapper {
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
+   padding: 0 20px;
+   position: sticky;
+   top: 0;
+   z-index: 99;
+
+   background: rgba(255, 255, 255, 0.15);
+   backdrop-filter: blur(4px);
+   -webkit-backdrop-filter: blur(4px);
+}
+
+.navbar {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   cursor: pointer;
+}
+
+.navbar h3.logo-title {
+   font-size: 32px;
+}
+
+.home {
+   padding: 20px;
+   background-color: #fff;
+}
+
+.home h1.welcome {
+   color: gray;
+}
+
+.welcome b {
+   color: navy;
+}
+
+.books-wrapper {
+   display: flex;
+   align-items: center;
+   background: #f9f9f9;
+   gap: 20px;
+   flex-wrap: wrap;
+   padding: 20px;
+   border-radius: 12px;
+}
+
+.home h4 {
+   margin-top: 30px;
+}
+
+/* Loader Spinner */
+@keyframes spinner {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.spinner-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+}
+
+.loading-spinner {
+   width: 50px;
+   height: 50px;
+   border: 10px solid #f3f3f3; /* Light grey */
+   border-top: 10px solid #383636; /* Black */
+   border-radius: 50%;
+   animation: spinner 1.5s linear infinite;
+}
+
+/* BookCard */
+.book-card {
+   margin: 0 auto;
+   padding: 50px 0;
+   position: relative;
+}
+
+.book-card img.book-img {
+   width: 320px;
+   object-fit: cover;
+}
+
+.book-title {
+   position: absolute;
+   top: 60px;
+   left: 30%;
+   color: #f0e9e9;
+   font-weight: 600;
+   background-color: darkgrey;
+   padding: 5px 8px;
+   border-radius: 4px;
+}
+
+.show-more {
+   cursor: pointer;
+   position: absolute;
+   bottom: 70px;
+   left: 30%;
+   font-weight: 600;
+   background-color: #007bff;
+   color: #fff;
+   padding: 5px 8px;
+   border-radius: 4px;
+   border: none;
+   transition: background-color 0.3s ease-in-out;
+}
+
+.show-more:hover {
+   background-color: #0062cc;
 }
