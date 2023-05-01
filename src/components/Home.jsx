@@ -17,7 +17,7 @@ const Home = ({ books, loading }) => {
          <h4>Books Collection</h4>
          <div className="books-wrapper">
             {books.map((book) => (
-               <BooksCard key={book.id} />
+               <BooksCard key={book.id} book={book} />
             ))}
          </div>
       </div>
