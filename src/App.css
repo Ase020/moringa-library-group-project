@@ -4,7 +4,6 @@ body {
 }
 
 .App {
-   background: #f0e9e9;
    text-align: center;
    position: relative;
 }
@@ -38,6 +37,7 @@ a {
 
 .navbar h3.logo-title {
    font-size: 32px;
+   color: navy;
 }
 
 .home {
@@ -103,6 +103,7 @@ a {
 .book-card img.book-img {
    width: 320px;
    object-fit: cover;
+   border-radius: 10px;
 }
 
 .book-title {
@@ -132,4 +133,51 @@ a {
 
 .show-more:hover {
    background-color: #0062cc;
+}
+
+/* Book Details */
+.bookDetails {
+   margin: 20px 60px;
+   background: #f0e9e9;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   overflow: hidden;
+}
+
+.bookDetail-img {
+   flex: 1;
+   padding: 0;
+   object-fit: cover;
+}
+
+.more-details {
+   flex: 1;
+   padding: 20px;
+   padding-left: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   text-align: left;
+}
+
+a.go-back {
+   align-items: center;
+   color: #007bff;
+   transition: color 0.3s ease-in-out;
+}
+
+a.go-back:hover {
+   color: #0062cc;
+}
+
+button.add-to-shelf {
+   margin-bottom: 20px;
+   color: #0062cc;
+   border: none;
+   padding: 8px;
+   border-radius: 6px;
+   font-weight: 600;
+   background: #fff;
 }
