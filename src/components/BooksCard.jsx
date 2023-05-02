@@ -17,6 +17,8 @@ const BooksCard = ({ book }) => {
          <button className="show-more">
             <Link to={`/books/${id}`}>More Details</Link>
          </button>
+         <button className="like-button"> 👍
+         </button>
       </div>
    );
 };
