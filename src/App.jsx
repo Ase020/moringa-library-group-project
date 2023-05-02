@@ -1,10 +1,10 @@
+import { useContext, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Book, Home, Layout, MyShelf } from "./components";
-import "./App.css";
-import { useContext } from "react";
+import { Book, Favorites, Home, Layout, MyShelf } from "./components";
 import { BooksContext } from "./context/books";
 import { MyShelfContext } from "./context/myShelf";
+import "./App.css";
 
 function App() {
    const [books, loading] = useContext(BooksContext);
@@ -35,6 +35,10 @@ function App() {
             {
                path: "/books/:id",
                element: <Book addToShelf={addToShelf} />,
+            },
+            {
+               path: "/favorites",
+               element: <Favorites />,
             },
          ],
       },

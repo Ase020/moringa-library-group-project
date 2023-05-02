@@ -10,7 +10,7 @@ body {
 
 a {
    text-decoration: none;
-   color: inherit;
+   color: navy;
 }
 
 .navbar-wrapper {
@@ -38,6 +38,31 @@ a {
 .navbar h3.logo-title {
    font-size: 32px;
    color: navy;
+}
+
+.nav-links {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+   font-weight: 600;
+}
+
+.count-wrapper {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.books-count {
+   background: #1d7af5;
+   color: #fff;
+   border-radius: 50%;
+   padding: 4px;
+   width: 14px;
+   height: 14px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .home {
@@ -146,7 +171,7 @@ a {
    left: 35%;
    font-weight: 600;
    background-color: #007bff;
-   color: #fff;
+   color: #fff !important;
    padding: 5px 8px;
    border-radius: 4px;
    border: none;
@@ -194,7 +219,7 @@ a.go-back:hover {
    color: #0062cc;
 }
 
-button.add-to-shelf {
+.add-to-shelf {
    margin-bottom: 20px;
    color: #0062cc;
    border: none;
@@ -223,4 +248,3 @@ button.add-to-shelf {
 .empty-shelf img {
    max-width: 500px;
 }
-

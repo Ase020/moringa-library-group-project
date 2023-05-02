@@ -15,10 +15,12 @@ const BooksCard = ({ book }) => {
          <img src={image} alt={title} className="book-img" />
          <span className="book-title">{title}</span>
          <button className="show-more">
-            <Link to={`/books/${id}`}>More Details</Link>
+            <Link to={`/books/${id}`} style={{ color: "#fff" }}>
+               More Details
+            </Link>
          </button>
-         <button className="like-button"> 👍
-         </button>
+
+         <button className="like-button"> 👍</button>
       </div>
    );
 };
