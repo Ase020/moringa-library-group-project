@@ -4,6 +4,7 @@ import { Book, Home, Layout, MyShelf } from "./components";
 import "./App.css";
 import { useContext } from "react";
 import { BooksContext } from "./context/books";
+import MyFavourite from "./components/MyFavoutrite";
 
 function App() {
    const [books, loading] = useContext(BooksContext);
@@ -24,6 +25,10 @@ function App() {
             {
                path: "/books/:id",
                element: <Book />,
+            },
+            {
+               path: "/my-favourite",
+               element: <MyFavourite />,
             },
          ],
       },
