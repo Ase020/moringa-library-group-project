@@ -40,6 +40,17 @@ a {
    color: navy;
 }
 
+.navbar-text {
+   color: blue;
+   display: flex;
+   margin-right: 100px;
+   transition: all 1s;
+}
+
+.navbar-text:hover {
+   color: red;
+}
+
 .home {
    padding: 20px;
    background-color: #fff;

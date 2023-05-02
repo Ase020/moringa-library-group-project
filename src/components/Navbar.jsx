@@ -9,8 +9,14 @@ const Navbar = () => {
             <h3 className="logo-title">Moringa Library</h3>
          </Link>
 
-         <Link to="my-shelf">My Shelf</Link>
-         <Link to="my-favourite">Liked Books</Link>
+         <Link to="my-shelf">
+            <h4 className="navbar-text">My Shelf</h4>
+
+         </Link>
+         <Link to="my-shelf">
+            <h4 className="navbar-text">Liked Books</h4>
+
+         </Link>
       </div>
    );
 };
