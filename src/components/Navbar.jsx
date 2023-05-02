@@ -10,7 +10,7 @@ const Navbar = () => {
          </Link>
 
          <Link to="my-shelf">My Shelf</Link>
-         <Link to="my-favourite">Favourites</Link>
+         <Link to="my-favourite">Liked Books</Link>
       </div>
    );
 };
