@@ -204,3 +204,23 @@ button.add-to-shelf {
    background: #fff;
    cursor: pointer;
 }
+
+/* Empty Shelf */
+.empty-shelf {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto;
+   /* height: 300px; */
+}
+
+.empty-shelf h2 {
+   font-size: 1.5rem;
+   margin-bottom: 20px;
+}
+
+.empty-shelf img {
+   max-width: 500px;
+}
+
