@@ -12,7 +12,7 @@ const Home = ({ books, loading }) => {
                Welcome to <b>Moringa</b> library.
             </h1>
 
-            <p>Find your perfect book from a variery of genres and enjoy a good read.</p>
+            <p>Find your perfect book from a variety of genres and enjoy a good read.</p>
          </div>
          <h4>Books Collection</h4>
          <div className="books-wrapper">

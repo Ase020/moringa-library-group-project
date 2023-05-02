@@ -180,4 +180,5 @@ button.add-to-shelf {
    border-radius: 6px;
    font-weight: 600;
    background: #fff;
+   cursor: pointer;
 }
