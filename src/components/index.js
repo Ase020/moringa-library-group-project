@@ -6,5 +6,6 @@ import { default as BooksCard } from "./BooksCard";
 import { default as Loader } from "./Loader";
 import { default as Book } from "./Book";
 import { default as Favorites } from "./Favorites";
+import { default as EmptyShelf } from "./EmptyShelf";
 
-export { Home, Navbar, Layout, MyShelf, BooksCard, Loader, Book, Favorites };
+export { Home, Navbar, Layout, MyShelf, BooksCard, Loader, Book, Favorites, EmptyShelf };

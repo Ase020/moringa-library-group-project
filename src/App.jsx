@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Book, Favorites, Home, Layout, MyShelf } from "./components";
 import { BooksContext } from "./context/books";
 import { MyShelfContext } from "./context/myShelf";
+import { FavoritesContext } from "./context/favorite";
 import "./App.css";
 
 function App() {
@@ -11,14 +12,22 @@ function App() {
 
    const [shelf, setShelf] = useContext(MyShelfContext);
 
+   const [favorite, setFavorite] = useContext(FavoritesContext);
+
    const addToShelf = (id) => {
       const find = books.find((book) => book.id === id);
       if (!shelf.includes(find)) {
          setShelf([...shelf, find]);
-         console.log("added");
       }
    };
 
+   const addToFavorites = (id) => {
+      const find = books.find((book) => book.id === id);
+      if (!favorite.includes(find)) {
+         setFavorite([...favorite, find]);
+         console.log("added");
+      }
+   };
    const router = createBrowserRouter([
       {
          path: "/",
@@ -26,7 +35,7 @@ function App() {
          children: [
             {
                path: "/",
-               element: <Home books={books} loading={loading} />,
+               element: <Home books={books} loading={loading} addToFavorites={addToFavorites} />,
             },
             {
                path: "/my-shelf",
@@ -38,7 +47,7 @@ function App() {
             },
             {
                path: "/favorites",
-               element: <Favorites />,
+               element: <Favorites favorite={favorite} />,
             },
          ],
       },
