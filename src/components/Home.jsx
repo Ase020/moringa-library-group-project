@@ -2,7 +2,7 @@
 import BooksCard from "./BooksCard";
 import Loader from "./Loader";
 
-const Home = ({ books, loading }) => {
+const Home = ({ books, loading, addToFavorites }) => {
    if (!loading) return <Loader />;
 
    return (
@@ -17,7 +17,7 @@ const Home = ({ books, loading }) => {
          <h4>Books Collection</h4>
          <div className="books-wrapper">
             {books.map((book) => (
-               <BooksCard key={book.id} book={book} />
+               <BooksCard key={book.id} book={book} addToFavorites={addToFavorites} />
             ))}
          </div>
       </div>

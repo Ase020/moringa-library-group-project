@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line react/prop-types
-const BooksCard = ({ book }) => {
+const BooksCard = ({ book, addToFavorites }) => {
    const { title, image, id } = book;
 
    // To randomise the book images
@@ -20,7 +20,10 @@ const BooksCard = ({ book }) => {
             </Link>
          </button>
 
-         <button className="like-button"> 👍</button>
+         <button className="like-button" onClick={() => addToFavorites(id)}>
+            {" "}
+            👍
+         </button>
       </div>
    );
 };

@@ -1,16 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import BooksCard from "./BooksCard";
-import shelf from "../../public/shelf.png";
-
-const EmptyShelf = () => {
-   return (
-      <div className="empty-shelf">
-         <h2>No books on this shelf yet.</h2>
-         <img src={shelf} alt="Empty shelf" />
-      </div>
-   );
-};
+import EmptyShelf from "./EmptyShelf";
 
 const MyShelf = ({ shelf }) => {
    return (
