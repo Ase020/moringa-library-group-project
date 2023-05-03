@@ -1,4 +1,4 @@
-import shelf from "../../public/shelf.png";
+import shelf from "/shelf.png";
 
 const EmptyShelf = () => {
    return (
