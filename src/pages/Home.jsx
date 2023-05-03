@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import BooksCard from "./BooksCard";
-import Loader from "./Loader";
+import BooksCard from "../components/BooksCard";
+import Loader from "../components/Loader";
 
 const Home = ({ books, loading, addToFavorites }) => {
    if (!loading) return <Loader />;

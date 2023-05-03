@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Book, Favorites, Home, Layout, MyShelf } from "./components";
+import { Book, Favorites, Home, MyShelf, Layout } from "./pages";
 import { BooksContext } from "./context/books";
 import { MyShelfContext } from "./context/myShelf";
 import { FavoritesContext } from "./context/favorite";

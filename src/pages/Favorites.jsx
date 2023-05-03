@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import BooksCard from "./BooksCard";
-import EmptyShelf from "./EmptyShelf";
+import { BooksCard, EmptyShelf } from "../components";
 
 const Favorites = ({ favorite }) => {
    console.log(favorite);
