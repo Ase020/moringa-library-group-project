@@ -28,7 +28,7 @@ function App() {
       }
    };
 
-   const removeFromCollection = (id) => {
+   const removeFromFavorites = (id) => {
       setFavorite(favorite.filter((book) => book.id !== id));
    };
 
@@ -51,7 +51,7 @@ function App() {
             },
             {
                path: "/favorites",
-               element: <Favorites favorite={favorite} removeFromCollection={removeFromCollection} />,
+               element: <Favorites favorite={favorite} removeFromFavorites={removeFromFavorites} />,
             },
          ],
       },

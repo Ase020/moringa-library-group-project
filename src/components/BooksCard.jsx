@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 /* eslint-disable react/no-unescaped-entities */
