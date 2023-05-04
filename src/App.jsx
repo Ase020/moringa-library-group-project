@@ -21,6 +21,10 @@ function App() {
       }
    };
 
+   const removeFromShelf = (id) => {
+      setShelf(shelf.filter((book) => book.id !== id));
+   };
+
    const addToFavorites = (id) => {
       const find = books.find((book) => book.id === id);
       if (!favorite.includes(find)) {
@@ -47,7 +51,7 @@ function App() {
             },
             {
                path: "/books/:id",
-               element: <Book addToShelf={addToShelf} />,
+               element: <Book addToShelf={addToShelf} removeFromShelf={removeFromShelf} />,
             },
             {
                path: "/favorites",
