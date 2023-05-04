@@ -25,9 +25,13 @@ function App() {
       const find = books.find((book) => book.id === id);
       if (!favorite.includes(find)) {
          setFavorite([...favorite, find]);
-         console.log("added");
       }
    };
+
+   const removeFromCollection = (id) => {
+      setFavorite(favorite.filter((book) => book.id !== id));
+   };
+
    const router = createBrowserRouter([
       {
          path: "/",
@@ -47,7 +51,7 @@ function App() {
             },
             {
                path: "/favorites",
-               element: <Favorites favorite={favorite} />,
+               element: <Favorites favorite={favorite} removeFromCollection={removeFromCollection} />,
             },
          ],
       },

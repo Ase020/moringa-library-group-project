@@ -17,7 +17,7 @@ const Home = ({ books, loading, addToFavorites }) => {
          <h4>Books Collection</h4>
          <div className="books-wrapper">
             {books.map((book) => (
-               <BooksCard key={book.id} book={book} addToFavorites={addToFavorites} />
+               <BooksCard key={book.id} book={book} onClick={addToFavorites} />
             ))}
          </div>
       </div>

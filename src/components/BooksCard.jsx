@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line react/prop-types
-const BooksCard = ({ book, addToFavorites }) => {
+const BooksCard = ({ book, onClick }) => {
    const { title, image, id } = book;
 
    // To randomise the book images
@@ -20,9 +22,8 @@ const BooksCard = ({ book, addToFavorites }) => {
             </Link>
          </button>
 
-         <button className="like-button" onClick={() => addToFavorites(id)}>
-            {" "}
-            ❤️
+         <button className="like-button" onClick={() => onClick(id)}>
+            <FavoriteBorderOutlinedIcon style={{ color: "red" }} />
          </button>
       </div>
    );
