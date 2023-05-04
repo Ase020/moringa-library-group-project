@@ -2,7 +2,6 @@
 import { BooksCard, EmptyShelf } from "../components";
 
 const Favorites = ({ favorite, removeFromFavorites }) => {
-   console.log(favorite);
    return (
       <div className="my-shelf">
          <h4>My Favorites</h4>

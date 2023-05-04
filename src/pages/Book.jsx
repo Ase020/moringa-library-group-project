@@ -3,13 +3,18 @@ import { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import { BooksContext } from "../context/books";
+import { MyShelfContext } from "../context/myShelf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-const Book = ({ addToShelf }) => {
+const Book = ({ addToShelf, removeFromShelf }) => {
    const [books] = useContext(BooksContext);
+   const [shelf] = useContext(MyShelfContext);
+
    const { id } = useParams();
    const bookObj = books[id - 1];
+
+   const inShelf = shelf.includes(bookObj);
 
    return (
       <div className="bookDetails">
@@ -30,9 +35,15 @@ const Book = ({ addToShelf }) => {
 
             <p>ISBN: {bookObj.isbn}</p>
 
-            <button className="add-to-shelf" onClick={() => addToShelf(bookObj.id)}>
-               Add to My Shelf
-            </button>
+            {inShelf ? (
+               <button className="add-to-shelf" onClick={() => removeFromShelf(bookObj.id)}>
+                  Remove from shelf
+               </button>
+            ) : (
+               <button className="add-to-shelf" onClick={() => addToShelf(bookObj.id)}>
+                  Add to shelf
+               </button>
+            )}
 
             <Link to="/" className="go-back">
                <FontAwesomeIcon icon={faArrowLeft} /> Go back
