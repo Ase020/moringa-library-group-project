@@ -5,6 +5,7 @@ const FavoritesContext = createContext();
 
 function FavoritesProvider({ children }) {
    const [favorite, setFavorite] = useState([]);
+   
 
    const value = [favorite, setFavorite];
    return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>;

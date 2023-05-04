@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MyShelfContext } from "../context/myShelf";
+import { FavoritesContext } from "../context/favorite";
 
 const Navbar = () => {
    const [shelf] = useContext(MyShelfContext);
+   const[favorite] = useContext (FavoritesContext)
+   
+   
+   const shelfcount = shelf.length
+   const favCount = favorite.length;
 
-   const count = shelf.length;
    return (
       <div className="navbar-wrapper">
          <Link to="/" className="navbar">
@@ -15,11 +20,14 @@ const Navbar = () => {
          </Link>
 
          <div className="nav-links">
+            <div className="count-wrapper">
             <Link to="favorites">Favorites</Link>
+               <span className="books-count" style={{backgroundColor: 'red'}}>{favCount}</span>
+            </div>
 
             <div className="count-wrapper">
                <Link to="my-shelf">My Shelf</Link>
-               <span className="books-count">{count}</span>
+               <span className="books-count">{shelfcount}</span>
             </div>
          </div>
       </div>

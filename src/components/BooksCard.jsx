@@ -22,7 +22,7 @@ const BooksCard = ({ book, addToFavorites }) => {
 
          <button className="like-button" onClick={() => addToFavorites(id)}>
             {" "}
-            👍
+            ❤️
          </button>
       </div>
    );
