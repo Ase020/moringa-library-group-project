@@ -49,10 +49,12 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 Special thanks to our Technical Mentor [Solomon Kitonyi](https://github.com/SolomonKitonyi) for the guidance and knowledge he has shared with me during this course.
 
-### Contributors
+## Contributors
 
-# Felix Nyalenda
+### Felix Nyalenda
 
-# Mark Chweya
+### Mark Chweya
 
-# Idris Noor
+### Idris Noor
+
+### Nicole Sanaipei
