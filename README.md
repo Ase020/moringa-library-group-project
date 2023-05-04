@@ -34,7 +34,7 @@ To use this application, follow these steps:
 1. Open the application in your web browser.
 2. View profiles of bots in the `Home` component.
 3. To add a book to your shelf, click on the `more details` in the `BookCard` component. You will be navigated to a books details section. Click on the `Add to Favorites` button and the book will be added to the `MyShelf` component.
-4. To favorite a book, click on the red "👍" `button` in the `BookCard` component. The book will be liked and added to your favorites collection.
+4. To favorite a book, click on the red "❤️" `button` in the `BookCard` component. The book will be liked and added to your favorites collection.
 
 ## Built With
 
